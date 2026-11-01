@@ -31,4 +31,10 @@
 - [x] Add creator identity, professional title, email, LinkedIn, GitHub, copyright, and quick links to every page footer.
 - [ ] Contact-form delivery, abuse protection and server-side validation remain pending until the owner supplies/authorizes a receiving service and endpoint.
 - [x] Analytics is intentionally not added because it is optional and no provider/property was selected.
-- [ ] Final cross-device browser/console smoke checks remain to be performed after deployment; only implemented source behavior and selected live pages are verified so far.
+- [x] Final local and live cross-device/browser/console smoke checks completed; see the verification details below.
+
+
+## Final verification
+- [x] Public HTTPS URL and all 12 primary and supplemental routes checked after deployment; all returned HTTP 200 and rendered the expected page titles/headings.
+- [x] Sitemap contains all 12 pages; robots.txt, custom 404, CV PDF, professional photo, and SEO/social metadata checked live.
+- [x] Live desktop/tablet/mobile checks at 1440, 768, and 390 px passed without horizontal overflow; project search/filters and empty state, dark mode, mobile menu, image loading, and CV access passed with no console or failed-request errors.
