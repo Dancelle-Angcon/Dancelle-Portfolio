@@ -11,7 +11,7 @@
 - [x] Add the supplied CV as `cv.pdf` and enable its View and Download links.
 - [x] Add the Typography Brand Poster to the Projects gallery with a WebP preview and links to the original PNG.
 - [x] Replace the Experience page placeholder with the Classroom Acting President experience and responsibilities listed in the CV.
-- [x] Update the local README to reflect the supplied CV, portrait, added project, and remaining contact-form limitation.
+- [x] Update the local README to reflect the supplied CV, portrait, added project, and mailto contact-form behavior.
 
 ## Previously completed site outcomes
 - [x] Keep the landing-page photo filename instruction removed, with initials fallback; show both education bullets, replace landing Work experience with Project Types, and list the supplied Graphic Designer and Electronic Technician project-type bullets.
@@ -26,10 +26,10 @@
 - [x] Keep the portfolio publicly available without login on GitHub Pages with HTTPS at the default public URL; custom domain is optional and not configured.
 - [x] Add per-page title, description, 3–8 relevant keywords, canonical URL, Open Graph and Twitter metadata; add `robots.txt`, `sitemap.xml`, and a custom 404 page.
 - [x] Lazy-load below-the-fold project/certificate imagery, retain optimized WebP previews, and leave full-size originals available for deliberate viewing/download. GitHub Pages controls HTTP cache headers.
-- [x] Preserve the static-site security boundary: no frontend secrets or user-file uploads; keep message submission disabled until an owner-approved receiving endpoint is configured; add browser-level form constraints.
+- [x] Preserve the static-site security boundary: no frontend secrets or user-file uploads; add browser-level form constraints and open a pre-filled `mailto:` draft addressed to the portfolio email.
 - [x] Improve accessibility with a skip link, readable small text, dark-mode text contrast adjustments, labeled controls, descriptive alt text, and visible keyboard focus.
 - [x] Add creator identity, professional title, email, LinkedIn, GitHub, copyright, and quick links to every page footer.
-- [ ] Contact-form delivery, abuse protection and server-side validation remain pending until the owner supplies/authorizes a receiving service and endpoint.
+- [x] Contact form composes a draft addressed to `dancelleangcon58@gmail.com`, with the subject, name, reply email, and message pre-filled. The sender must press Send in their email app; the site itself does not transmit or store messages and provides no server-side validation or abuse protection.
 - [x] Analytics is intentionally not added because it is optional and no provider/property was selected.
 - [x] Final local and live cross-device/browser/console smoke checks completed; see the verification details below.
 

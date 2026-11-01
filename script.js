@@ -44,6 +44,25 @@ themeButton?.addEventListener('click', () => {
   updateThemeButton();
 });
 
+const contactForm = document.querySelector('[data-contact-form]');
+contactForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (!contactForm.reportValidity()) return;
+
+  const fields = new FormData(contactForm);
+  if (String(fields.get('website') || '').trim()) return;
+
+  const name = String(fields.get('name') || '').trim();
+  const email = String(fields.get('email') || '').trim();
+  const subject = String(fields.get('subject') || '').trim();
+  const message = String(fields.get('message') || '').trim();
+  const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+  const mailto = `mailto:dancelleangcon58@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const status = contactForm.querySelector('[data-form-status]');
+  if (status) status.textContent = 'Opening a pre-filled email draft...';
+  window.location.href = mailto;
+});
+
 function normalizeRoute(path) {
   let normalized = path.toLowerCase().replace(/index\.html$/, '');
   if (!normalized.endsWith('/')) normalized += '/';

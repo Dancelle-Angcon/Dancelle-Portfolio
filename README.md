@@ -28,7 +28,7 @@ The `assets/` directory contains the supplied certificate and project artwork, i
 
 ## Contact form status
 
-The site’s email, LinkedIn, and GitHub links are active. The contact form’s Send button is intentionally disabled until the owner selects and authorizes a receiving endpoint/provider. GitHub Pages is static hosting, so message delivery, spam protection, and server-side validation require an external form service or separately hosted backend. Do not place private API keys or credentials in the public client-side files.
+The contact form opens a pre-filled email draft addressed to `dancelleangcon58@gmail.com`. The sender’s subject, name, reply email, and message are placed in the corresponding email fields. The sender must review and press Send in their email app; the website does not transmit or store the message itself. This requires a configured email app or browser `mailto:` handler and does not provide server-side validation or abuse protection.
 
 ## Verification
 

@@ -42,8 +42,9 @@
         <div class="info-item section-gap"><span>Location</span><strong>Calamba City, Laguna Province, Philippines</strong></div>
         <div class="info-item section-gap"><span>LinkedIn</span><strong><a href="https://www.linkedin.com/in/dancelle-angcon-ab7454448?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer">Dancelle Angcon</a></strong></div>
       </section>
-      <form class="card" action="#" method="post">
+      <form class="card" action="mailto:dancelleangcon58@gmail.com" method="post" enctype="text/plain" data-contact-form>
         <h2>Send a message</h2>
+        <p class="form-note">Submitting opens your email app with the details pre-filled. Review and send the email there.</p>
         <div class="form-grid">
           <div class="form-field"><label for="name">Name</label><input id="name" name="name" placeholder="Your name" autocomplete="name" required minlength="2" maxlength="80"></div>
           <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="Your email" autocomplete="email" required maxlength="254"></div>
@@ -51,7 +52,8 @@
           <div class="form-field form-wide"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell me about your inquiry" required minlength="10" maxlength="3000"></textarea></div>
           <div class="honeypot" aria-hidden="true"><label for="website">Leave this blank</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
         </div>
-        <button class="button section-gap" type="submit" disabled>Submit</button>
+        <button class="button section-gap" type="submit">Submit</button>
+        <p class="form-note" data-form-status aria-live="polite"></p>
       </form>
     </div>
   </main>
