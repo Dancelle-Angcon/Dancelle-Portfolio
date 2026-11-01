@@ -1,0 +1,15 @@
+Dancelle Reña O. Angcon — graphic design & electronic technician portfolio
+
+Run locally (no packages or internet connection required):
+1. Extract the ZIP and open a terminal in this folder.
+2. Run `python3 -m http.server 8000` (Windows: `py -m http.server 8000`).
+3. Visit http://localhost:8000.
+4. Stop the server with Ctrl+C.
+
+The portfolio combines graphic design and electronic technician work. Home/About, Education, Skills, Certificates, Projects, Experience, CV, and Contact Me are separate pages; Home also scrolls into its About section. The full About page lists BSIT at City College of Calamba (2024–present) and EPAS TESDA at Palo Alto Integrated School (2022–2024), with the High Honor Award beside the EPAS dates. Home lists logo creation, typography, brand poster creation, and digital marketing under Graphic Designer; its Electronic Technician section lists circuit creation, CCTV wiring, and electronics troubleshooting and fixing. Other bracketed prompts are editable and are not completed-work claims.
+
+The Certificates page contains all six supplied certificates, each with a preview plus working View and Download controls. The uploaded TESDA certificate image was sideways, so its View/Download use a readable rotated copy; the original image is also retained in the certificate assets folder.
+
+The Projects page shows the Brew Haven seasonal campaign artwork (banner ad, Instagram post, landing-page banner, and newsletter header), Caelum identity artwork (badge, horizontal logo, icon, and vertical logo), and the Typography Brand Poster. Open or download each original PNG from its card. Both supplied PSD files are included in `assets/projects/`; the Caelum logo PSD is linked from its horizontal-logo card. Lightweight WebP previews are in `assets/projects/previews/`. The electronic-technician project card is still an editable placeholder because no electronics project image was included.
+
+The professional portrait is `profile-photo.jpg` beside `index.html`. The supplied CV is available as `cv.pdf` and has working View and Download controls on the CV page. The Experience page reflects the Classroom Acting President role and responsibilities listed in the CV. Duplicate or remove project cards and update their `data-category`, `data-year`, `data-type`, and `data-search` attributes to keep filters accurate. The year filter also checks visible year text. Copy `projects/project-template/` to create a case-study page. Contact-form submission remains inactive until a receiving endpoint is configured. The visual system remains navy, light blue, and neon violet, with one Arial font family in regular, bold, and italic styles. This package is for localhost; it is not publicly hosted.
