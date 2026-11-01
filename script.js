@@ -21,9 +21,7 @@ const profilePhoto = document.querySelector('#profile-photo');
 if (profilePhoto) {
   const showInitialsFallback = () => profilePhoto.remove();
   profilePhoto.addEventListener('error', showInitialsFallback, { once: true });
-  if (profilePhoto.complete) {
-    if (profilePhoto.naturalWidth === 0) showInitialsFallback();
-  }
+  if (profilePhoto.complete && profilePhoto.naturalWidth === 0) showInitialsFallback();
 }
 
 let savedTheme = null;
@@ -46,13 +44,20 @@ themeButton?.addEventListener('click', () => {
   updateThemeButton();
 });
 
+function normalizeRoute(path) {
+  let normalized = path.toLowerCase().replace(/index\.html$/, '');
+  if (!normalized.endsWith('/')) normalized += '/';
+  return normalized;
+}
+
 const currentUrl = new URL(window.location.href);
-const currentPath = currentUrl.pathname.toLowerCase();
-const currentFile = currentPath.split('/').filter(Boolean).pop() || 'index.html';
-const isLandingPage = currentFile === 'index.html';
+const currentPath = normalizeRoute(currentUrl.pathname);
+const scriptUrl = document.currentScript ? new URL(document.currentScript.src) : currentUrl;
+const siteRoot = normalizeRoute(new URL('.', scriptUrl).pathname);
+const isLandingPage = currentPath === siteRoot;
 document.querySelectorAll('.primary-nav a').forEach((link) => {
   const target = new URL(link.href);
-  if (target.pathname.toLowerCase() !== currentPath) return;
+  if (normalizeRoute(target.pathname) !== currentPath) return;
   if (isLandingPage) {
     const activeHash = currentUrl.hash || '#home';
     const targetHash = target.hash || '#home';
@@ -66,7 +71,6 @@ const projectCards = Array.from(document.querySelectorAll('.project-card'));
 if (projectCards.length) {
   const search = document.querySelector('#project-search');
   const category = document.querySelector('#project-category');
-  const year = document.querySelector('#project-year');
   const type = document.querySelector('#project-type');
   const emptyMessage = document.querySelector('.filter-empty');
 
@@ -77,17 +81,13 @@ if (projectCards.length) {
       const text = `${card.textContent} ${card.dataset.search || ''}`.toLowerCase();
       const matchesText = !query || text.includes(query);
       const matchesCategory = !category?.value || category.value === 'all' || card.dataset.category === category.value;
-      const yearQuery = (year?.value || '').trim().toLowerCase();
-      const cardYear = (card.dataset.year || '').trim().toLowerCase();
-      const visibleYear = (card.querySelector('.project-meta')?.textContent || '').toLowerCase();
-      const matchesYear = !yearQuery || yearQuery === 'all' || cardYear === yearQuery || visibleYear.includes(yearQuery);
       const matchesType = !type?.value || type.value === 'all' || card.dataset.type === type.value;
-      const visible = matchesText && matchesCategory && matchesYear && matchesType;
+      const visible = matchesText && matchesCategory && matchesType;
       card.hidden = !visible;
       if (visible) visibleCount += 1;
     });
-    if (emptyMessage) emptyMessage.style.display = visibleCount ? 'none' : 'block';
+    if (emptyMessage) emptyMessage.hidden = visibleCount > 0;
   }
-  [search, category, year, type].forEach((control) => control?.addEventListener('input', filterProjects));
-  [category, year, type].forEach((control) => control?.addEventListener('change', filterProjects));
+  [search, category, type].forEach((control) => control?.addEventListener('input', filterProjects));
+  [category, type].forEach((control) => control?.addEventListener('change', filterProjects));
 }
