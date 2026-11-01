@@ -1,0 +1,19 @@
+Certificate information transcribed from the user-supplied certificates.zip. Source files are included under assets/certificates/; PDF page-one preview images are under assets/certificates/previews/.
+
+1. Electronic Products Assembly and Servicing NC II — TESDA National Certificate II; issued June 9, 2024; valid until June 8, 2029. The supplied image was sideways; its preview/view/download copy is rotated for readability, and the unmodified upload is retained as certificate-01.jpg.
+   Display file: previews/certificate-01.jpg
+
+2. Digital Safety and Security Awareness — Cisco Networking Academy; completed August 20, 2026.
+   Source: certificate-02.pdf · Preview: previews/certificate-02.jpg
+
+3. Effective Speaking and Listening Skills (US English) — Wadhwani Foundation; completed October 31, 2026; 6 hours.
+   Source: certificate-03.pdf · Preview: previews/certificate-03.jpg
+
+4. Interpersonal Skills (US English) — Wadhwani Foundation; completed October 31, 2026; 6 hours.
+   Source: certificate-04.pdf · Preview: previews/certificate-04.jpg
+
+5. Self-Management (US English) — Wadhwani Foundation; completed October 31, 2026; 5 hours.
+   Source: certificate-05.pdf · Preview: previews/certificate-05.jpg
+
+6. Self-Presentation (US English) — Wadhwani Foundation; completed October 31, 2026; 2 hours.
+   Source: certificate-06.pdf · Preview: previews/certificate-06.jpg
